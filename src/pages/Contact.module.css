@@ -1,0 +1,61 @@
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('../assets/hero_bg.png') no-repeat center center/cover;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.text {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    margin-bottom: 3rem;
+}
+
+.emailLink {
+    display: inline-block;
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color: var(--color-neon-lime);
+    border-bottom: 2px solid var(--color-neon-lime);
+    padding-bottom: 0.5rem;
+    transition: all 0.3s;
+}
+
+.emailLink:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .emailLink {
+        font-size: 1.5rem;
+    }
+}

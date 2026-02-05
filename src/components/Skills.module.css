@@ -1,0 +1,123 @@
+.container {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    /* Ensure it sits on top */
+    background-color: var(--color-bg);
+    /* Ensure background is solid */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    /* Pure white */
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-family: var(--font-body);
+    letter-spacing: 4px;
+    color: #DFFF00;
+    /* Neon Lime for visibility */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.categoryCard {
+    background: #111111;
+    /* Off-black for contrast */
+    padding: 2rem;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoryCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(223, 255, 0, 0.1);
+    border-color: #DFFF00;
+}
+
+.categoryTitle {
+    color: #DFFF00;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #333;
+    padding-bottom: 1rem;
+}
+
+.skillList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skillItem {
+    background: #222;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.skillItem:hover {
+    background: #DFFF00;
+    color: #000;
+}
+
+/* CSS Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animateFadeIn {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animateSlideUp {
+    opacity: 0;
+    /* Start hidden */
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+}
